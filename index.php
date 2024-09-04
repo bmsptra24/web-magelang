@@ -22,23 +22,23 @@
       echo renderCard(
         'assets/images/borobudur.jpg',
         'Borobudur',
-        'Borobudur adalah candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah. Dibangun pada abad ke-9 selama pemerintahan Dinasti Syailendra, Borobudur terkenal dengan reliefnya yang menggambarkan ajaran Buddha dan perjalanan spiritual menuju pencerahan.',
+        'Borobudur adalah candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah. Dibangun pada abad ke-9 selama pemerintahan Dinasti Syailendra, Borobudur terkenal dengan reliefnya.',
         './ticket.php',
         'Pesan Tiket'
       );
 
       echo renderCard(
-        'assets/images/borobudur.jpg',
-        'Borobudur',
-        'Borobudur adalah candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah. Dibangun pada abad ke-9 selama pemerintahan Dinasti Syailendra, Borobudur terkenal dengan reliefnya yang menggambarkan ajaran Buddha dan perjalanan spiritual menuju pencerahan.',
+        'assets/images/gunung-andong.jpg',
+        'Gunung Andong',
+        'Gunung Andong adalah gunung kecil di Kabupaten Magelang, Jawa Tengah, yang populer sebagai destinasi pendakian bagi pemula. Dengan ketinggian sekitar 1.726 meter di atas permukaan laut, Gunung Andong menawarkan jalur pendakian yang ramah, namun tetap menantang. ',
         './ticket.php',
         'Pesan Tiket'
       );
 
       echo renderCard(
-        'assets/images/borobudur.jpg',
-        'Borobudur',
-        'Borobudur adalah candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah. Dibangun pada abad ke-9 selama pemerintahan Dinasti Syailendra, Borobudur terkenal dengan reliefnya yang menggambarkan ajaran Buddha dan perjalanan spiritual menuju pencerahan.',
+        'assets/images/nepal-van-java.webp',
+        'Nepal van Java',
+        'Nepal van Java adalah julukan untuk Dusun Butuh di lereng Gunung Sumbing, Kabupaten Magelang. Desa ini dikenal dengan rumah-rumah yang bertingkat di lereng bukit, yang mengingatkan pada pemandangan desa-desa di pegunungan Himalaya. ',
         './ticket.php',
         'Pesan Tiket'
       );
