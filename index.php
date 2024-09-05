@@ -14,7 +14,7 @@
   <!-- Navbar -->
   <?php include 'components/navbar.php'; ?>
 
-  <div class="container mx-auto flex flex-col gap-10 py-10">
+  <div class="container mx-auto flex flex-col gap-10 py-10 max-w-screen-xl">
     <?php include 'components/carousel.php'; ?>
 
     <div class="flex items-center md:justify-between flex-col md:flex-row gap-4">
@@ -47,12 +47,14 @@
   </div>
 
   <!-- YouTube Video -->
-  <div class="container mx-auto pb-10">
+  <div class="container mx-auto pb-10 max-w-screen-xl">
     <iframe
       class="embed-yt w-full h-[720px]"
       src="https://www.youtube.com/embed/PbaQVSe-sys"
       allowfullscreen></iframe>
   </div>
+
+  <?php include 'components/footer.php'; ?>
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>

@@ -13,13 +13,16 @@
   <!-- Navbar -->
   <?php include 'components/navbar.php'; ?>
 
-  <div class="container mx-auto flex flex-col gap-10 py-10">
+  <div class="container mx-auto flex flex-col gap-10 py-10 items-center">
     <h3 class="text-center text-2xl dark:text-white">Beli Tiket</h3>
     <?php include 'components/form.php'; ?>
     <?php include 'components/table.php'; ?>
   </div>
 
+  <?php include 'components/footer.php'; ?>
+
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="js/calculate.js"></script>
 </body>
 
 </html>
