@@ -5,16 +5,37 @@ include 'db_connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data dari input form
     $nama = $_POST['nama'];
-    $no_hp = $_POST['no_hp']; // Pastikan nama field unik
+    $no_hp = $_POST['no_hp'];
     $waktu_pelaksanaan = $_POST['waktu_pelaksanaan'];
-    $harga = $_POST['harga'];
+    $jumlah_hari = $_POST['jumlah_hari'];
     $jumlah_peserta = $_POST['jumlah_peserta'];
-    $paket = $_POST['paket']; // Nilai paket dari dropdown
     $tagihan = $_POST['tagihan'];
 
-    // Query untuk memasukkan data ke database
-    $sql = "INSERT INTO pesanan (nama, no_hp, waktu_pelaksanaan, harga, jumlah_peserta, paket, tagihan)
-            VALUES ('$nama', '$no_hp', '$waktu_pelaksanaan', '$harga', '$jumlah_peserta', '$paket', '$tagihan')";
+    // Proper handling of paket[] (array of selected checkboxes)
+    if (isset($_POST['paket']) && is_array($_POST['paket'])) {
+        $paket = implode(", ", $_POST['paket']); // Convert array to comma-separated string
+    } else {
+        $paket = ''; // If no paket is selected, set it to an empty string
+    }
+
+    // Jika ID ada, update, jika tidak, insert baru
+    if (isset($_POST['id']) && !empty($_POST['id'])) {
+        // Update existing record
+        $id = $_POST['id'];
+        $sql = "UPDATE pesanan SET 
+                    nama='$nama', 
+                    no_hp='$no_hp', 
+                    waktu_pelaksanaan='$waktu_pelaksanaan', 
+                    jumlah_hari='$jumlah_hari', 
+                    jumlah_peserta='$jumlah_peserta', 
+                    paket='$paket', 
+                    tagihan='$tagihan' 
+                WHERE id=$id";
+    } else {
+        // Insert new record
+        $sql = "INSERT INTO pesanan (nama, no_hp, waktu_pelaksanaan, jumlah_hari, jumlah_peserta, paket, tagihan)
+                VALUES ('$nama', '$no_hp', '$waktu_pelaksanaan', '$jumlah_hari', '$jumlah_peserta', '$paket', '$tagihan')";
+    }
 
     // Eksekusi query dan cek apakah berhasil
     if ($conn->query($sql) === TRUE) {

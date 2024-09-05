@@ -7,6 +7,7 @@
   <title>Magelang Discover | Tiket</title>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/calculate.js"></script>
 </head>
 
 <body class="dark:bg-gray-900">
@@ -19,10 +20,11 @@
     <?php include 'components/table.php'; ?>
   </div>
 
-  <?php include 'components/footer.php'; ?>
+  <div class="container mx-auto flex flex-col max-w-screen-xl">
+    <?php include 'components/footer.php'; ?>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-  <script src="js/calculate.js"></script>
 </body>
 
 </html>
