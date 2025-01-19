@@ -15,9 +15,13 @@
   <?php include 'components/navbar.php'; ?>
 
   <div class="container mx-auto flex flex-col gap-10 py-10 items-center">
-    <h3 class="text-center text-2xl dark:text-white">Beli Tiket</h3>
+    <h3 class="text-center text-2xl dark:text-white">Pesan Tiket Trip Magelang</h3>
     <?php include 'components/form.php'; ?>
-    <?php include 'components/table.php'; ?>
+
+    <div>
+      <h3 class="text-center text-2xl dark:text-white">List Pesanan Tiket Trip Magelang</h3>
+      <?php include 'components/table.php'; ?>
+    </div>
   </div>
 
   <div class="container mx-auto flex flex-col max-w-screen-xl">
